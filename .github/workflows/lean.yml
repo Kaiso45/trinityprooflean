@@ -5,7 +5,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/leanprover/lean4:nightly
+      image: leanprovercommunity/lean4:latest
     steps:
       - uses: actions/checkout@v4
       - name: Build project
