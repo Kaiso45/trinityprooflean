@@ -1,0 +1,15 @@
+name: Lean build
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/leanprover/lean4:latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build project
+        run: |
+          lake update
+          lake exe mathlib:cache get || true   # ok if cache is missing
+          lake build
