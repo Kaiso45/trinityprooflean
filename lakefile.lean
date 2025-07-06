@@ -3,7 +3,7 @@ open Lake DSL
 
 package trinity where
   moreLeanArgs := #["-DautoImplicit=true"]
-  require mathlib from git "https://github.com/leanprover-community/mathlib4" @ "v4.21.0"
+  require mathlib from git "https://github.com/leanprover-community/mathlib4" @ "v4.2.1"
 
 @[default_target]
 lean_lib TrinitySpanModel
